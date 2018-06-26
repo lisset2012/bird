@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sky{
+    background: url(../img/sky.jpg) 0 0 repeat-x;
+    background-size: 2000px 100vh;
+    width: 100vw;
+    height: 100vh;
+
+    animation: sky 10s linear infinite;
+
+    overflow: hidden;
+
+    position: absolute;
+    z-index: 1;
+
+}
+
+@keyframes sky{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: -2000px 0;
+    }
+}
+
+.bird{
+    background: url(../img/birds.png) 0 0 no-repeat;
+    /* background-size: 144px 288px; */
+    width: 144px;
+    height: 72px;
+
+    animation: bird 300ms steps(4) infinite alternate;
+    transition: top 500ms,left 500 ms;
+
+    overflow: hidden;
+
+    position: absolute;
+    z-index: 2;
+    top:266px;
+
+}
+
+@keyframes bird{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 0 -288px;
+    }
+}
+
+.flag{
+    background: url(../img/racing-flag.png) 0 0 no-repeat;
+        background-size: 144px 126px;
+
+    width:144px;
+    height: 126px;
+    position: absolute;
+    top: 6px;
+    right: 15px;
+    z-index: 2;
+}
+
+.timer{
+    position:absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
+    font-size: 60px;
+}
+
+.crossing-line{
+    border:2px dotted;
+    position: absolute;
+    right: 140px;
+    top: -2;
+    z-index: 3;
+    height: 100vh;
+    width: 1px;
+}
+
+hide{
+    display: none;
+}
